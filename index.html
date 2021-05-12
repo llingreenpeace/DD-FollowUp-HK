@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <form method="post" action="" class="" id="mc-form">
+    <div class="">
+      <label>FirstName <input name="FirstName" type="text" value=""> </label>
+      <br>
+      <label>LastName <input name="LastName" type="text" value=""> </label>
+      <br>
+      <label>Email <input name="Email" type="email" value=""> </label>
+      <br>
+      <label>MobilePhone <input name="MobilePhone" type="tel" value=""> </label>
+      <br>
+      <label>BirthDate <input name="Birthdate" type="date" value=""> </label>
+      <br>
+
+      <label>平日方便聯繫時段</label> <br>
+
+      <label><input name="AvailableTimeslot" type="checkbox" value="0900-1200"> 早上 0900-1200 </label><br>
+      <label><input name="AvailableTimeslot" type="checkbox" value="1200-1400"> 中午 1200-1400 </label><br>
+      <label><input name="AvailableTimeslot" type="checkbox" value="1400-1800"> 下午 1400-1800 </label><br>
+
+      <label><input name="OptIn" type="checkbox" value=""> 我同意綠色和平按照收集個人資料聲明的方式與我聯絡並清楚明白綠色和平隱私保護政策。)</label>
+      <br>
+
+      <input type="hidden" name="req" value="post_data">
+
+      <!-- <input type="hidden" name="CampaignId" value="7012u000000P4pYAAS" title="Comms - Direct Dialogue Followup - HK"> -->
+      <input type="hidden" name="CampaignId" value="7012u000000P4pNAAS" title="Comms - Direct Dialogue Followup - TW">
+
+      <!-- <input type="hidden" name="Company" value="null"> -->
+
+    </div>
+  </form>
+
+
+  <div>
+    <button class="send-fetch-form-btn">Send FETCH FORM request</button>
+  </div>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
