@@ -13,8 +13,222 @@
 
 html {
   color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  font-family: Noto Sans TC,PingFang HK,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;  
+}
+
+.wrapper { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+	/*background: #fff;
+	height: 26px;*/
+	padding: 25px;	
+  box-shadow: 1px 1px 10px silver;
+}
+
+header .logo {	
+	display: block;
+	background: url(https://change.greenpeace.org.tw/others/gp-logo-green-2019.png) 0 0 no-repeat;
+	background-size: contain;
+	width: 230px;
+	height: 26px;
+	z-index: 10;	
+}
+
+header .visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;	
+}
+
+footer {	
+  display: flex;   	
+	justify-content: space-between;
+  flex-direction: column;
+	background: #292F47;	
+	color: #ecf0f1;		
+	height: auto;
+  box-sizing: border-box;
+	padding: 3rem;
+}
+
+.footer__up {
+  display: flex;   	
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+footer ul {	
+  list-style-type: none;		
+}
+
+footer li {
+  white-space: nowrap;
+}
+
+footer a {	
+	display: inline-block;
+	color: #E4FDE1;
+	text-decoration: none;
+	padding: 5px 0;
+}
+
+.footer__logo {
+  margin: 15px 0;
+}
+
+.footer__logo img {
+  width: 200px;
+}
+
+.footer__menu {
+  text-align: right;
+  margin-left: 2rem;
+}
+
+.footer__copyright {
+  padding-top: 2rem;  
+  border-top: solid 1px #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /*height: calc(100vh - 200px);*/
+}
+
+main .img-div {
+  width: 65%;
+  height: 100vh;
+  background-image: url('../img/GP1SUY8I_Web_size.jpg');
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+}
+
+main .form-div {
+  width: 35%;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+main .form-div h2 {
+  margin-block-start: 0;
+}
+
+form div {
+  margin: 0 0 10px 0;
+}
+
+.form__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form__LastName {
+  width: 30%;
+}
+
+.form__FirstName {
+  width: 65%;
+}
+
+.form__label {
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  /*float: left;  */
+  color: #606266;
+  line-height: 40px;
+  padding: 0 12px 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+
+.form__label span {
+  color: red;
+}
+
+.form-check__label {
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  /*float: left;  */
+  color: #606266;
+  line-height: 0px;  
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form__input {
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width: 100%;
+}
+
+.form-phone__input {
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);  
+}
+
+.form__OptIn {
+  padding: 15px 0;
+}
+
+#MobilePhone-error {
+  display: block;
 }
 
 /*
@@ -35,6 +249,28 @@ html {
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
+}
+
+button {
+  color:#fff; 
+  background-color: #67c23a;
+  border-color: #67c23a;
+  width:92px; 
+  height:46px; 
+  border:none; 
+  border-radius:.25em;
+}
+
+button:active {
+  background: #5daf34;
+  border-color: #5daf34;
+  color: #fff;
+}
+
+button:hover {
+  background: #85ce61;
+  border-color: #85ce61;
+  color: #fff;
 }
 
 /*
@@ -169,14 +405,179 @@ textarea {
   clear: both;
 }
 
+/*
+ * Full page loading / message
+ */
+ #thank_you_page {
+	display: none;
+}
+
+#page-loading, #page-message {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 10001;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#page-loading.hide, #page-message.hide {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#page-message .msg-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 3px;
+  background-color: #ff8100;
+  color: #fff;  
+  padding: 30px;  
+  font-size: x-large;
+}
+
+#page-message .msg-box-btn {
+  color:#fff; 
+  background-color:#2462d0; 
+  width:92px; 
+  height:46px; 
+  border:none; 
+  border-radius:.25em;
+}
+
+#page-loading .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+#page-loading .lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #6c0;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+#page-loading .lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {transform: scale(0); }
+  100% {transform: scale(1); }
+}
+@keyframes lds-ellipsis3 {
+  0% {transform: scale(1); }
+  100% {transform: scale(0); }
+}
+@keyframes lds-ellipsis2 {
+  0% {transform: translate(0, 0); }
+  100% {transform: translate(24px, 0); }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+	color: red;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1260px) {
+  main .img-div {
+    background-position: 20% 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Style adjustments for viewports that meet the condition */  
+  main {
+    flex-direction: column;
+  }
+
+  main .img-div {
+    width: 100%;
+    height: calc(100vw * 498/800);    
+    position: relative;
+  }
+
+  main .form-div {
+    width: 100%;
+  }
+
+  .footer__up {	    
+    flex-direction: column;
+    width: 100%;   
+  }
+
+  .footer__info {
+    width: 100%;    
+  }
+
+  .footer__menu {
+    width: 100%;
+    text-align: left;    
+    margin: 0;
+  }
+
+  .footer__menu ul {
+    padding-inline-start: 0;
+  }
+  
 }
 
 @media print,
